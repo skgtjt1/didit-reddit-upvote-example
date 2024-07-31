@@ -30,19 +30,10 @@ The project is a work in progress and is not yet complete.
 5. Run `npm run dev` to start the development server
 6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the site
 
-## Potential future features
+## What I did to fix deployment:
 
-- [ ] User profiles
-- [ ] Sorting posts by recent (date posted), top (most upvotes), and most controversial (most upvotes _and_ downvotes)
-- [ ] User karma scores
-- [ ] User badges / trophies (awards for achievements like number of posts, years on the site, etc.)
-- [ ] User settings (eg. number of posts per page, theme, etc.)
-- [ ] Moderation tools / reporting or flagging objectionable comments for removable by admins
-- [ ] Searching posts (possibly using simple SQL LIKE '%some search%', or [Postgres text search](https://www.crunchydata.com/blog/postgres-full-text-search-a-search-engine-in-a-database))
-- [ ] Subreddits (separate communities, that isn't just one big list of posts, that can be created by users)
-- [ ] User notifications
-- [ ] User private messaging
-- [ ] User blocking
-- [ ] User following
-- [ ] User feed (posts from users you follow)
-- [ ] User flair
+1. forced npm audit fix (not sure if this is necessary but was a security risk)
+2. Had to fix the SQL table setup, semicolon and comma
+3. it was NEXTAUTH_SECRET not AUTH_SECRET for the next auth environment variable
+4. NEXTAUTH_URL was fine as localhost for the local dev copy of the app but for the vercel it needed to be the actual address of the site.
+5. had to make sure the github OAuth was pointing to the actual site addresses.
