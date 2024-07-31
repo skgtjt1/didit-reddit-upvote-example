@@ -37,3 +37,16 @@ The project is a work in progress and is not yet complete.
 3. it was NEXTAUTH_SECRET not AUTH_SECRET for the next auth environment variable
 4. NEXTAUTH_URL was fine as localhost for the local dev copy of the app but for the vercel it needed to be the actual address of the site.
 5. had to make sure the github OAuth was pointing to the actual site addresses.
+
+(Required)
+🎯 Please mention the requirements you met and which goals you achieved for this assignment.
+
+- I fixed the deployment to Vercel, initially I think I made it harder for myself but by using the Vercel build logs and NextJS error logs I managed to fix the issues and get it deployed.
+
+🎯 Were there any requirements or goals that you were not quite able to achieve?
+
+- I didn't add any stretch goals
+
+🎯 If so, could you please tell us what was it that you found difficult about these tasks?
+
+- I found that suddenly learning how Next Auth works on an unfamiliar app was quite challenging.
