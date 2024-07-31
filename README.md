@@ -46,3 +46,57 @@ The project is a work in progress and is not yet complete.
 - [ ] User following
 - [ ] User feed (posts from users you follow)
 - [ ] User flair
+
+## my notes
+
+- security vulnerability npm audit fix --force apparently fixes it...
+- is the env working? Do I need to link to my database to get app working?
+-
+
+## error from first npm run dev:
+
+[auth][error] MissingSecret: Please define a `secret`. .Read more at https://errors.authjs.dev#missingsecret
+at assertConfig (webpack-internal:///(rsc)/./node_modules/@auth/core/lib/utils/assert.js:52:16)
+at Auth (webpack-internal:///(rsc)/./node_modules/@auth/core/index.js:82:95)
+at processTicksAndRejections (node:internal/process/task_queues:95:5)
+at runNextTicks (node:internal/process/task_queues:64:3)
+at listOnTimeout (node:internal/timers:538:9)
+at process.processTimers (node:internal/timers:512:7)
+⨯ Error: connect ECONNREFUSED ::1:5432
+at async PostList (./src/components/PostList.jsx:19:29)
+digest: "893357623"
+⨯ Error: connect ECONNREFUSED ::1:5432
+at async PostList (./src/components/PostList.jsx:19:29)
+digest: "893357623"
+⨯ src/components/UserInfo.jsx (12:25) @ name
+⨯ TypeError: Cannot read properties of undefined (reading 'name')
+at UserInfo (./src/components/UserInfo.jsx:19:30)
+digest: "934816118"
+10 | {session ? (
+11 | <div>
+
+> 12 | {session.user.name}{" "}
+
+     |                         ^
+
+13 | <span className="text-xs text-zinc-400 mr-3">#{session.user.id}</span>
+14 | <LogoutButton />
+15 | </div>
+⨯ src/components/UserInfo.jsx (12:25) @ name
+⨯ TypeError: Cannot read properties of undefined (reading 'name')
+at UserInfo (./src/components/UserInfo.jsx:19:30)
+digest: "934816118"
+10 | {session ? (
+11 | <div>
+
+> 12 | {session.user.name}{" "}
+
+     |                         ^
+
+13 | <span className="text-xs text-zinc-400 mr-3">#{session.user.id}</span>
+14 | <LogoutButton />
+15 | </div>
+✓ Compiled in 959ms (272 modules)
+GET / 500 in 19845ms
+✓ Compiled /favicon.ico in 408ms (519 modules)
+GET /favicon.ico 200 in 512ms
